@@ -50,7 +50,6 @@ const Tweeter = function () {
                 _posts.splice(_posts.indexOf(post),1);
             }
         }
-        return
     }
 
 
@@ -75,13 +74,14 @@ const Tweeter = function () {
                 removeCommentHelper(post.comments,commentID)
             }
         }
+
         return
     }
 
     const removeCommentHelper = function(Comments ,commentID ) {
         for(let comment of Comments){
             if (comment.id == commentID) {
-                Comments.splice(Comments.indexOf(commentID),1)
+                Comments.splice(Comments.indexOf(comment),1)
             }
         }
         return 
@@ -96,5 +96,4 @@ const Tweeter = function () {
     }
 
 }
-
 
